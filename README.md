@@ -30,7 +30,6 @@ Budget and Parcel Parameters:
 - Not in a neighborhood association
 
 ### Data
-
 - Fulton County Open GIS data
 Over 300K records of available parcels in Fulton County
 - Fulton County tax CAMA tables
@@ -39,9 +38,14 @@ Over 300K records of available parcels in Fulton County
 Over 1.8 million records
 
 ### Prerequisites
-This code runs on the Databricks platform using a community account. Before running this code, create an [account](https://databricks.com/try-databricks) on Databricks. Only a community account is necessary. 
+##### Esri ArcGIS 
+The mapping and anlysis was performed using GIS software on [ArcGIS online](https://www.esri.com/en-us/arcgis/products/arcgis-online/overview) however the layers can be processed using any comparable software.   
 
-### Run
+##### Time Series - R
+The Time Series analysis was performed in the R programming language using RStudio, and can be run using any comparable integrated development environment for R.  
+
+
+<!--### Run
 To run the code on the bitcoinotc.csv edge file: 
 1. Import the bitcoinotc.csv data into your data space on Databricks.
 2. Import the BitcoinOTC.dbc notebook to your workspace on Databricks. 
