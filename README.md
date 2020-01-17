@@ -4,19 +4,39 @@
 This scala code was completed as part of an assignment for my Data and Visual Analytics course at The Georgia Insitute of Technology. 
 
 ### Introduction
-The Bitcoin OTC Trust Weighted Signed [Network]("https://snap.stanford.edu/data/soc-sign-bitcoin-otc.html") maintains a record of users' reputation to prevent transactions with fraudulent and risky users. This graph is a who-trusts-whom network of people who trade using the platform, and is comprised of almost 6,000 nodes and over 35,000 edges. I analyzed this Bitcoin OTC network using [DataFrame API](https://spark.apache.org/docs/2.3.1/api/scala/index.html#org.apache.spark.sql.Dataset) in Spark and Scala on the Databricks platform.
+The Atlanta Habitat for Humanity is the third largest Habitat affiliate in America. The organization produces approximately 50 homes per year for it’s homeownership program, serving families that make between $30K to 50K per year. In 2018, they acquired 40 properties for this program. Significant increases in property costs in Fulton County have resulted in a decline of affordable properties that can be acquired. This necessitates statistical analysis of available properties to ascertain which regions should receive concentrated efforts for lot acquisition.  
+
 
 Objectives:
-1. Eliminate any duplicate rows.
-2. Filter the graph such that only nodes containing an edge weight >= 5 are preserved.  
-3. Analyze the graph to find the nodes with the highest weighted-in-degree, weighted-out-degree, and weighted-total-degree using DataFrame operations.
-4. Download a new DataFrame to output.csv containing my analysis (schema provided below).
+-	Property analysis: identify parcels that meet Habitat’s criteria. 
+-	Market analysis: identify neighborhoods or localized areas that we should prioritize that may become unattainable with-in the next 5 to 10 years. 
 
-|v: vertex id |d : weighted-degree value |c: category of weighted-degree |
-|:----------|:-------------|:-------------|
-| | |i: weighted-in-degree|
-| | |o: weighted-out-degree|
-| | |t : weighted-total-degree|
+Budget and Parcel Parameters:
+- Budget: $300K - $500K
+- Lot cost: Under $40K (ideally)
+- Flat
+- Not on a major road
+- On a paved road
+- Not in a flood plain
+- 75 ft away from a stream
+- Not in College Park
+- Lot frontage must be at least 50ft
+- Lot depth much be at least 80ft
+- No easements
+- No sewer setback easements
+- Sewer connection
+- Not in a neighborhood association
+- Sewer connection
+- Not in a neighborhood association
+
+### Data
+
+- Fulton County Open GIS data
+Over 300K records of available parcels in Fulton County
+- Fulton County tax CAMA tables
+- Tax parcel data from 2013 to 2018
+
+Over 1.8 million records
 
 ### Prerequisites
 This code runs on the Databricks platform using a community account. Before running this code, create an [account](https://databricks.com/try-databricks) on Databricks. Only a community account is necessary. 
